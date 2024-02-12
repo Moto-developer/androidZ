@@ -2,6 +2,7 @@ package com.yecid.sqlite.model
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.widget.AdapterView.AdapterContextMenuInfo
 
@@ -38,7 +39,6 @@ data class ManagerBd (val context: Context) {
 
         return result
 
-
     }
 
     fun insertData2 (cedula:Int, nombre:String, apellido:String, telefono: Int, ciudadD: String):Long {
@@ -58,9 +58,16 @@ data class ManagerBd (val context: Context) {
 
         return result
 
-
     }
 
+    fun getData ():ArrayList<Ciudad>{
+       openBdRd()
+        val cursor= bd.rawQuery(Constantes.CONSULTA,null)
+
+
+
+        return lista
+    }
 
 }
 

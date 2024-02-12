@@ -17,5 +17,7 @@ class Constantes {
         var SENA_LAT = 2.4827055384635823
         var SENA_LONG = -76.56253748585905
 
+        const val CONSULTA = "select * from ciudad"
+
     }
 }
